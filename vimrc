@@ -1,4 +1,5 @@
 nmap <C-p> :Files<LF>
+nmap <C-b> :Buffers<LF>
 set backspace=2
 set modelines=0
 set ruler
@@ -22,7 +23,7 @@ let g:tmuxline_preset = {
       \'x'    : '%a',
       \'y'    : '%H%M hrs',
       \'z'    : '#(pmset -g batt | grep -o "[0-9]*%%")'}
-set updatetime=1000
+set updatetime=600
 set ignorecase
 set smartcase
 filetype off                  " required
