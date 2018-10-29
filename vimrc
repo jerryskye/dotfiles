@@ -1,5 +1,6 @@
 nmap <C-p> :Files<LF>
 nmap <C-b> :Buffers<LF>
+nmap <C-m> :Marks<LF>
 set backspace=2
 set modelines=0
 set ruler
