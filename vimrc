@@ -1,6 +1,10 @@
 nmap <C-p> :Files<LF>
 nmap <C-b> :Buffers<LF>
 nmap <C-m> :Marks<LF>
+map <Leader>rf :call RunCurrentSpecFile()<CR>
+map <Leader>rs :call RunNearestSpec()<CR>
+map <Leader>rl :call RunLastSpec()<CR>
+map <Leader>ra :call RunAllSpecs()<CR>
 set backspace=2
 set modelines=0
 set ruler
@@ -24,6 +28,7 @@ let g:tmuxline_preset = {
       \'x'    : '%a',
       \'y'    : '%H%M hrs',
       \'z'    : '#(pmset -g batt | grep -o "[0-9]*%%")'}
+let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
 set updatetime=600
 set ignorecase
 set smartcase
@@ -49,6 +54,8 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'slim-template/vim-slim'
 Plugin 'edkolev/tmuxline.vim'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'jgdavey/tslime.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
