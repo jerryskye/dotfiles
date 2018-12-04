@@ -9,8 +9,7 @@ export HISTCONTROL=ignoredups:erasedups
 # When the shell exits, append to the history file instead of overwriting it
 shopt -s histappend
 
-# After each command, append to the history file and reread it
-export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h\[\033[31m\][\$($rvm_bin_path/rvm-prompt)]:\[\033[33;1m\]\w\[\033[m\]\$ "
+export PS1="\[\033[31m\][\$($rvm_bin_path/rvm-prompt)]:\[\033[33;1m\]\w\[\033[m\] ⚡️ "
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
