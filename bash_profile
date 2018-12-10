@@ -3,6 +3,7 @@ export LC_ALL=en_US.UTF-8
 export EDITOR=nvim
 export GPG_TTY=$(tty)
 [ -f $HOME/.profile ] && . $HOME/.profile
+set -o vi
 
 # Avoid duplicates
 export HISTCONTROL=ignoredups:erasedups:ignorespace
