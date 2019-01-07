@@ -34,7 +34,9 @@ let g:fzf_buffers_jump = 1
 set updatetime=600
 set ignorecase
 set smartcase
-set inccommand=nosplit
+if has("nvim")
+  set inccommand=nosplit
+endif
 filetype off                  " required
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
