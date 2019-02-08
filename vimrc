@@ -30,7 +30,6 @@ let g:tmuxline_preset = {
       \'z'    : '#(pmset -g batt | grep -o "[0-9]*%%")'}
 let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
 let g:tslime_always_current_session = 1
-let g:fzf_buffers_jump = 1
 set updatetime=600
 set ignorecase
 set smartcase
