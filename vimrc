@@ -1,6 +1,6 @@
-nmap <C-p> :Files<LF>
-nmap <C-b> :Buffers<LF>
-nmap <C-m> :Marks<LF>
+nmap <Leader>f :Files<CR>
+nmap <Leader>b :Buffers<CR>
+nmap <Leader>m :Marks<CR>
 map <Leader>rf :call RunCurrentSpecFile()<CR>
 map <Leader>rs :call RunNearestSpec()<CR>
 map <Leader>rl :call RunLastSpec()<CR>
