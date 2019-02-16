@@ -38,7 +38,6 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'bling/vim-airline'
-Plugin 'morhetz/gruvbox'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'junegunn/fzf.vim'
 Plugin 'leafgarland/typescript-vim'
@@ -51,6 +50,8 @@ Plugin 'edkolev/tmuxline.vim'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'jgdavey/tslime.vim'
 Plugin 'posva/vim-vue'
+Plugin 'chriskempson/base16-vim'
+Plugin 'vim-airline/vim-airline-themes'
 call vundle#end()
 filetype plugin indent on
 
@@ -59,8 +60,7 @@ if has("termguicolors")
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
-set background=dark
-colorscheme gruvbox
+colorscheme base16-default-dark
 autocmd VimLeave * mksession! ~/.vim/Session.vim
 
 nmap <Leader>f :Files<CR>
