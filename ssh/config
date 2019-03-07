@@ -1,0 +1,3 @@
+Host mailserver
+  User root
+  HostName mail.siedlarz.com
