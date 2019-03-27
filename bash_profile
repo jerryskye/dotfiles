@@ -28,3 +28,11 @@ function mkcd() {
 function stopall() {
   for srv in $(brew services ls | grep started | awk '{print $1}'); do brew services stop $srv; done
 }
+
+function exitstatus() {
+  if [[ $? == 0 ]]; then
+    echo '❤️'
+  else
+    echo '💔'
+  fi
+}
