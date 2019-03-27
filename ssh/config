@@ -3,6 +3,4 @@ Host mailserver
   HostName mail.siedlarz.com
 
 Host ec2-ohio
-  User ubuntu
   HostName 18.224.173.47
-  IdentityFile ~/.ssh/ec2-ohio.pem
