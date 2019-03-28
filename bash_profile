@@ -6,14 +6,6 @@ function stopall() {
   for srv in $(brew services ls | grep started | awk '{print $1}'); do brew services stop $srv; done
 }
 
-function exitstatus() {
-  if [[ $? == 0 ]]; then
-    echo '❤️'
-  else
-    echo '💔'
-  fi
-}
-
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export EDITOR=nvim
