@@ -28,7 +28,7 @@ let g:tmuxline_preset = {
       \'x'    : '%a',
       \'y'    : '%H%M hrs',
       \'z'    : '#(pmset -g batt | grep -o "[0-9]*%%")'}
-let g:rspec_command = 'Start! -wait=always rspec {spec}'
+let g:rspec_command = 'Start! -wait=always rspec {spec} || tput bel'
 
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
