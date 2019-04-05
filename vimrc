@@ -28,8 +28,7 @@ let g:tmuxline_preset = {
       \'x'    : '%a',
       \'y'    : '%H%M hrs',
       \'z'    : '#(pmset -g batt | grep -o "[0-9]*%%")'}
-let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
-let g:tslime_always_current_session = 1
+let g:rspec_command = 'Start! -wait=always rspec {spec}'
 
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -38,6 +37,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-dispatch'
 Plugin 'bling/vim-airline'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'junegunn/fzf.vim'
@@ -49,7 +49,6 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'slim-template/vim-slim'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'thoughtbot/vim-rspec'
-Plugin 'jgdavey/tslime.vim'
 Plugin 'posva/vim-vue'
 Plugin 'chriskempson/base16-vim'
 Plugin 'vim-airline/vim-airline-themes'
