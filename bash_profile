@@ -16,7 +16,7 @@ export GPG_TTY=$(tty)
 export HISTCONTROL=ignoredups:erasedups:ignorespace
 shopt -s histappend
 
-export PS1="\[\033[1;34m\]\u@\h\[\033[0;31m\][\$(rvm-prompt)]:\[\033[1;33m\]\w\[\033[0;10m\] \$exitstatus  "
+export PS1="\[\033[1;34m\]\u@\h\[\033[0;31m\][\$(rvm-prompt)]:\[\033[1;33m\]\w\[\033[0;10m\] \[\$exitstatus\]  "
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
