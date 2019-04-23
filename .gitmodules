@@ -1,3 +1,6 @@
 [submodule "hammerspoon/Spoons/ControlEscape.spoon"]
 	path = hammerspoon/Spoons/ControlEscape.spoon
 	url = git@github.com:jasonrudolph/ControlEscape.spoon.git
+[submodule "hammerspoon/Spoons/VimMode.spoon"]
+	path = hammerspoon/Spoons/VimMode.spoon
+	url = git@github.com:dbalatero/VimMode.spoon
