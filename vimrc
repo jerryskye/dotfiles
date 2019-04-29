@@ -14,6 +14,7 @@ set ignorecase
 set smartcase
 if has("nvim")
   set inccommand=nosplit
+  set packpath+=~/.vim
 endif
 highlight LineNr ctermbg=black ctermfg=white
 set nocompatible
@@ -30,31 +31,7 @@ let g:tmuxline_preset = {
       \'z'    : '#(pmset -g batt | grep -o "[0-9]*%%")'}
 let g:rspec_command = 'Start! -wait=always rspec {spec} || tput bel'
 
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-set rtp+=/usr/local/opt/fzf
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-dispatch'
-Plugin 'tpope/vim-endwise'
-Plugin 'bling/vim-airline'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'junegunn/fzf.vim'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'xu-cheng/brew.vim'
-Plugin 'rhysd/vim-crystal'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'slim-template/vim-slim'
-Plugin 'edkolev/tmuxline.vim'
-Plugin 'thoughtbot/vim-rspec'
-Plugin 'posva/vim-vue'
-Plugin 'chriskempson/base16-vim'
-Plugin 'vim-airline/vim-airline-themes'
-call vundle#end()
-filetype plugin indent on
+set runtimepath+=/usr/local/opt/fzf
 
 if has("termguicolors")
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
