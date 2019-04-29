@@ -1,60 +1,80 @@
 [submodule "hammerspoon/Spoons/ControlEscape.spoon"]
 	path = hammerspoon/Spoons/ControlEscape.spoon
 	url = git@github.com:jasonrudolph/ControlEscape.spoon.git
+	ignore = all
 [submodule "hammerspoon/Spoons/VimMode.spoon"]
 	path = hammerspoon/Spoons/VimMode.spoon
 	url = git@github.com:dbalatero/VimMode.spoon
+	ignore = all
 [submodule "vim/pack/plugins/start/fzf.vim"]
 	path = vim/pack/plugins/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim.git
+	ignore = all
 [submodule "vim/pack/plugins/start/vim-airline"]
 	path = vim/pack/plugins/start/vim-airline
 	url = https://github.com/bling/vim-airline.git
+	ignore = all
 [submodule "vim/pack/plugins/start/vim-airline-themes"]
 	path = vim/pack/plugins/start/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
+	ignore = all
 [submodule "vim/pack/plugins/start/vim-bundler"]
 	path = vim/pack/plugins/start/vim-bundler
 	url = https://github.com/tpope/vim-bundler.git
+	ignore = all
 [submodule "vim/pack/plugins/start/vim-dispatch"]
 	path = vim/pack/plugins/start/vim-dispatch
 	url = https://github.com/tpope/vim-dispatch.git
+	ignore = all
 [submodule "vim/pack/plugins/start/vim-endwise"]
 	path = vim/pack/plugins/start/vim-endwise
 	url = https://github.com/tpope/vim-endwise.git
+	ignore = all
 [submodule "vim/pack/plugins/start/vim-fugitive"]
 	path = vim/pack/plugins/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+	ignore = all
 [submodule "vim/pack/plugins/start/vim-gitgutter"]
 	path = vim/pack/plugins/start/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
+	ignore = all
 [submodule "vim/pack/plugins/start/vim-rspec"]
 	path = vim/pack/plugins/start/vim-rspec
 	url = https://github.com/thoughtbot/vim-rspec.git
+	ignore = all
 [submodule "vim/pack/plugins/start/vim-ruby"]
 	path = vim/pack/plugins/start/vim-ruby
 	url = https://github.com/vim-ruby/vim-ruby.git
+	ignore = all
 [submodule "vim/pack/plugins/opt/brew.vim"]
 	path = vim/pack/plugins/opt/brew.vim
 	url = https://github.com/xu-cheng/brew.vim.git
+	ignore = all
 [submodule "vim/pack/plugins/opt/tmuxline.vim"]
 	path = vim/pack/plugins/opt/tmuxline.vim
 	url = https://github.com/edkolev/tmuxline.vim.git
+	ignore = all
 [submodule "vim/pack/plugins/opt/typescript-vim"]
 	path = vim/pack/plugins/opt/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git
+	ignore = all
 [submodule "vim/pack/plugins/opt/vim-crystal"]
 	path = vim/pack/plugins/opt/vim-crystal
 	url = https://github.com/rhysd/vim-crystal.git
+	ignore = all
 [submodule "vim/pack/plugins/opt/vim-elixir"]
 	path = vim/pack/plugins/opt/vim-elixir
 	url = https://github.com/elixir-lang/vim-elixir.git
+	ignore = all
 [submodule "vim/pack/plugins/opt/vim-slim"]
 	path = vim/pack/plugins/opt/vim-slim
 	url = https://github.com/slim-template/vim-slim.git
+	ignore = all
 [submodule "vim/pack/plugins/opt/vim-vue"]
 	path = vim/pack/plugins/opt/vim-vue
 	url = https://github.com/posva/vim-vue.git
+	ignore = all
 [submodule "vim/pack/plugins/start/base16-vim"]
 	path = vim/pack/plugins/start/base16-vim
 	url = https://github.com/chriskempson/base16-vim.git
+	ignore = all
