@@ -21,8 +21,8 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
-if [ -f ~/.fzf.bash ]; then
-  source ~/.fzf.bash
+if [ -s "$HOME/.fzf.bash" ]; then
+  source "$HOME/.fzf.bash"
   complete -D -F _fzf_path_completion -o default -o bashdefault
 fi
 
@@ -31,4 +31,4 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-[ -f $HOME/.profile ] && . $HOME/.profile # Source .profile last to allow host-specific overrides
+[ -f "$HOME/.profile" ] && . "$HOME/.profile" # Source .profile last to allow host-specific overrides
