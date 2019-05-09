@@ -24,3 +24,8 @@ end)
 hs.hotkey.bind({'cmd', 'ctrl'}, 'S', function()
   hs.application.launchOrFocus('Slack')
 end)
+
+hs.hotkey.bind({'cmd', 'ctrl'}, 'P', function()
+  local time_left = hs.itunes.getDuration() - hs.itunes.getPosition()
+  hs.timer.doAfter(time_left, hs.itunes.pause)
+end)
