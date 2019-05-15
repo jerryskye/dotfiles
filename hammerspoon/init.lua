@@ -58,7 +58,10 @@ end)
 
 hs.hotkey.bind({'cmd', 'ctrl'}, 'P', function()
   local time_left = hs.itunes.getDuration() - hs.itunes.getPosition()
-  hs.timer.doAfter(time_left, hs.itunes.pause)
+  hs.timer.doAfter(time_left, function()
+    hs.itunes.pause()
+    hs.itunes.setPosition(0)
+  end)
 end)
 
 hs.hotkey.bind({'cmd', 'ctrl'}, 'L', function()
