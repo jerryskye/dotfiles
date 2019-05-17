@@ -12,6 +12,7 @@ set expandtab
 set updatetime=600
 set ignorecase
 set smartcase
+set noshowmode
 if has("nvim")
   set inccommand=nosplit
   set packpath+=~/.vim
@@ -21,7 +22,7 @@ set nocompatible
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tmuxline#enabled = 0
+let g:airline#extensions#branch#displayed_head_limit = 10
 let g:tmuxline_preset = {
       \'a'    : '#S',
       \'win'  : '#I #W',
