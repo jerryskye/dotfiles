@@ -1,37 +1,6 @@
 hs.loadSpoon('ControlEscape'):start()
 local vim_mode = hs.loadSpoon('VimMode')
 
-local slack_window_layout = {'Slack', 'move 0.0,0.0,0.8,1 Color'}
-local itunes_window_layout = {{iTunes = {allowTitles = 'iTunes'}}, 'move 0.0,0.0,0.92,1 Color'}
-local itunes_mini_player_layout = {{iTunes = {allowTitles = 'Mini Player'}}, 'move 0.8,0.0,0.8,1 Color'}
-local imessage_window_layout = {'Messages', 'move 0.2,0.0,0.8,0.66 Color'}
-local window_layouts = {
-  hs.window.layout.new({
-    slack_window_layout,
-    itunes_mini_player_layout,
-    itunes_window_layout,
-    imessage_window_layout,
-    {'iTerm2', 'fullscreen Color'},
-    {'Firefox', 'fullscreen Color'}
-  }):setScreenConfiguration({Color = true, MP59G = false, DELL = false}),
-  hs.window.layout.new({
-    slack_window_layout,
-    itunes_mini_player_layout,
-    itunes_window_layout,
-    imessage_window_layout,
-    {'iTerm2', 'fullscreen MP59G'},
-    {'Firefox', 'fullscreen MP59G'}
-  }):setScreenConfiguration({Color = true, MP59G = true, DELL = false}),
-  hs.window.layout.new({
-    slack_window_layout,
-    itunes_mini_player_layout,
-    itunes_window_layout,
-    imessage_window_layout,
-    {'iTerm2', 'fullscreen DELL'},
-    {'Firefox', 'fullscreen MP59G'}
-  }):setScreenConfiguration({Color = true, MP59G = true, DELL = true})
-}
-
 hs.hotkey.bind({'cmd', 'ctrl'}, 'R', function()
   hs.reload()
 end)
@@ -64,8 +33,29 @@ hs.hotkey.bind({'cmd', 'ctrl'}, 'P', function()
   end)
 end)
 
-hs.hotkey.bind({'cmd', 'ctrl'}, 'L', function()
-  for _,layout in pairs(window_layouts) do
-    layout:apply()
+function moveWindow(window_name, unitRect, screen)
+  local window = hs.window.find(window_name)
+  if window then
+    window:moveToScreen(screen):moveToUnit(unitRect)
   end
+end
+
+function fullScreenAppMainWindow(app_name, screen)
+  local app = hs.application.find(app_name)
+  if app then
+    app:mainWindow():moveToScreen(screen):setFullScreen(true)
+  end
+end
+
+hs.hotkey.bind({'cmd', 'ctrl'}, 'L', function()
+  local screens = hs.screen.allScreens()
+  screens[3] = screens[3] or screens[2] or screens[1]
+  screens[2] = screens[2] or screens[1]
+
+  moveWindow('slack', '0.0,0.0,0.8,1', screens[1])
+  moveWindow('itunes', '0.0,0.0,0.92,1', screens[1])
+  moveWindow('mini player', '0.8,0.0,0.8,1', screens[1])
+  moveWindow('messages', '0.2,0.0,0.8,0.66', screens[1])
+  fullScreenAppMainWindow('iterm', screens[3])
+  fullScreenAppMainWindow('firefox', screens[2])
 end)
