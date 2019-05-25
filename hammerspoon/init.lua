@@ -47,10 +47,17 @@ function fullScreenAppMainWindow(app_name, screen)
   end
 end
 
+function distanceFromPrimaryScreen(screen)
+  return hs.geometry.point(screen:position()):distance(0, 0)
+end
+
 hs.hotkey.bind({'cmd', 'ctrl'}, 'L', function()
   local screens = hs.screen.allScreens()
-  screens[3] = screens[3] or screens[2] or screens[1]
+  table.sort(screens, function(a, b)
+    return distanceFromPrimaryScreen(a) < distanceFromPrimaryScreen(b)
+  end)
   screens[2] = screens[2] or screens[1]
+  screens[3] = screens[3] or screens[2]
 
   moveWindow('slack', '0.0,0.0,0.8,1', screens[1])
   moveWindow('itunes', '0.0,0.0,0.92,1', screens[1])
