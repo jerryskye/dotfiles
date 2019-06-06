@@ -5,7 +5,7 @@ hs.hotkey.bind({'cmd', 'ctrl'}, 'R', function()
   hs.reload()
 end)
 
-hs.hotkey.bind({'ctrl'}, '\\', function()
+hs.hotkey.bind({'cmd', 'ctrl'}, '\\', function()
   vim_mode:enter()
 end)
 
