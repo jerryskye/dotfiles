@@ -42,6 +42,7 @@ endif
 colorscheme base16-default-dark
 autocmd VimLeave * mksession! ~/.vim/Session.vim
 
+let mapleader=";"
 nmap <Leader>f :Files<CR>
 nmap <Leader>b :Buffers<CR>
 nmap <Leader>m :Marks<CR>
