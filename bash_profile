@@ -26,6 +26,7 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 if [ -s "$HOME/.fzf.bash" ]; then
   source "$HOME/.fzf.bash"
   complete -D -F _fzf_path_completion -o default -o bashdefault
+  export FZF_DEFAULT_COMMAND='rg --files --hidden'
 fi
 
 eval "$(rbenv init -)"
