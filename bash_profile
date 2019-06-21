@@ -2,10 +2,6 @@ function mkcd() {
   mkdir -p $1 && cd $1
 }
 
-function stopall() {
-  for srv in $(brew services ls | grep started | awk '{print $1}'); do brew services stop $srv; done
-}
-
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export EDITOR=nvim
