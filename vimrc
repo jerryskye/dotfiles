@@ -47,7 +47,7 @@ let mapleader=";"
 nmap <Leader>f :Files<CR>
 nmap <Leader>b :Buffers<CR>
 nmap <Leader>m :Marks<CR>
-nmap <Enter> :noh<CR>
+nmap , :noh<CR>
 nmap <Leader>t :tabe term://bash -l<CR>
 map <Leader>rf :call RunCurrentSpecFile()<CR>
 map <Leader>rs :call RunNearestSpec()<CR>
