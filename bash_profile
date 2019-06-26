@@ -1,3 +1,11 @@
+# Useful functions and aliases
+
+alias l=lsd
+alias ll='l -l'
+alias la='ll -A'
+alias lt='l --tree'
+alias be='bundle exec'
+
 function mkcd() {
   mkdir -p $1 && cd $1
 }
