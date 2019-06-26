@@ -1,0 +1,2 @@
+EXCLUDES="Brewfile"
+SYMLINK_DIRS="vim/pack/plugins/start/* vim/pack/plugins/opt/* hammerspoon/Spoons/*"
