@@ -36,3 +36,4 @@ fi
 eval "$(rbenv init -)"
 
 [ -f "$HOME/.profile" ] && . "$HOME/.profile" # Source .profile last to allow host-specific overrides
+true
