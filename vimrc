@@ -31,7 +31,8 @@ let g:tmuxline_preset = {
       \'x'    : '%a',
       \'y'    : '%H%M hrs',
       \'z'    : '#(pmset -g batt | grep -o "[0-9]*%%")'}
-let g:rspec_command = 'Start! -wait=always rspec {spec} || tput bel'
+let test#strategy = "dispatch_background"
+let test#ruby#use_binstubs = 0
 
 set runtimepath+=/usr/local/opt/fzf
 
@@ -48,8 +49,9 @@ nmap <Leader>f :Files<CR>
 nmap <Leader>b :Buffers<CR>
 nmap <Leader>m :Marks<CR>
 nmap , :noh<CR>
-nmap <Leader>t :tabe term://bash -l<CR>
-map <Leader>rf :call RunCurrentSpecFile()<CR>
-map <Leader>rs :call RunNearestSpec()<CR>
-map <Leader>rl :call RunLastSpec()<CR>
-map <Leader>ra :call RunAllSpecs()<CR>
+nmap <Leader>T :tabe term://bash -l<CR>
+map <silent> <Leader>tf :TestFile<CR>
+map <silent> <Leader>ts :TestSuite<CR>
+map <silent> <Leader>tl :TestLast<CR>
+map <silent> <Leader>tn :TestNearest<CR>
+map <silent> <Leader>tv :TestVisit<CR>
