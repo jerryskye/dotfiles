@@ -20,6 +20,10 @@ endif
 highlight LineNr ctermbg=black ctermfg=white
 set nocompatible
 
+function! DispatchWait(cmd)
+  execute "Start! -wait=always " . a:cmd . " || tput bel"
+endfunction
+
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#displayed_head_limit = 10
@@ -30,7 +34,8 @@ let g:tmuxline_preset = {
       \'x'    : '%a',
       \'y'    : '%H%M hrs',
       \'z'    : '#(pmset -g batt | grep -o "[0-9]*%%")'}
-let test#strategy = "dispatch_background"
+let test#custom_strategies = {'dispatch_wait': function('DispatchWait')}
+let test#strategy = 'dispatch_wait'
 let test#ruby#use_binstubs = 0
 
 set runtimepath+=/usr/local/opt/fzf
