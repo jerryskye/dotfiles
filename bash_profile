@@ -15,6 +15,7 @@ export LC_ALL=en_US.UTF-8
 export EDITOR=nvim
 export GPG_TTY=$(tty)
 
+export HISTSIZE=10000
 export HISTCONTROL=ignoredups:erasedups:ignorespace
 shopt -s histappend
 
