@@ -33,13 +33,6 @@ hs.hotkey.bind({'cmd', 'ctrl'}, 'P', function()
   end)
 end)
 
-function moveWindow(window_name, unitRect, screen)
-  local window = hs.window.find(window_name)
-  if window then
-    window:moveToScreen(screen):moveToUnit(unitRect)
-  end
-end
-
 function fullScreenAppMainWindow(app_name, screen)
   local app = hs.application.find(app_name)
   if app then
@@ -59,10 +52,12 @@ hs.hotkey.bind({'cmd', 'ctrl'}, 'L', function()
   screens[2] = screens[2] or screens[1]
   screens[3] = screens[3] or screens[2]
 
-  moveWindow('slack', '0.0,0.0,0.8,1', screens[1])
-  moveWindow('itunes', '0.0,0.0,0.92,1', screens[1])
-  moveWindow('mini player', '0.8,0.0,0.8,1', screens[1])
-  moveWindow('messages', '0.2,0.0,0.8,0.66', screens[1])
+  hs.layout.apply({
+    {"Firefox", nil, screens[2], hs.layout.maximized, nil, nil},
+    {"iTunes", "Mini Player", screens[1], '0.0,0.0,0.8,1', nil, nil},
+    {"iTunes", "iTunes", screens[1], '0.0,0.0,0.92,1', nil, nil},
+    {"Messages", nil, screens[1], '0.8,0.0,0.8,1', nil, nil},
+    {"Slack", nil, screens[1], '0.2,0.0,0.8,0.66', nil, nil}
+  })
   fullScreenAppMainWindow('iterm', screens[3])
-  fullScreenAppMainWindow('firefox', screens[2])
 end)
