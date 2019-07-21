@@ -73,3 +73,12 @@ hs.hotkey.bind({'cmd', 'ctrl'}, 'L', function()
   })
   fullScreenAppMainWindow('iterm', screens[3])
 end)
+
+hs.hotkey.bind({'cmd', 'ctrl'}, ';', function()
+  local screens = screens_table()
+
+  hs.layout.apply({
+    {"Firefox", nil, screens[2], hs.layout.left50, nil, nil},
+    {"iTerm2", nil, screens[2], hs.layout.right50, nil, nil},
+  })
+end)
