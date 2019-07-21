@@ -44,13 +44,21 @@ function distanceFromPrimaryScreen(screen)
   return hs.geometry.point(screen:position()):distance(0, 0)
 end
 
-hs.hotkey.bind({'cmd', 'ctrl'}, 'L', function()
+function sort_screens(a, b)
+  return distanceFromPrimaryScreen(a) < distanceFromPrimaryScreen(b)
+end
+
+function screens_table()
   local screens = hs.screen.allScreens()
-  table.sort(screens, function(a, b)
-    return distanceFromPrimaryScreen(a) < distanceFromPrimaryScreen(b)
-  end)
+  table.sort(screens, sort_screens)
   screens[2] = screens[2] or screens[1]
   screens[3] = screens[3] or screens[2]
+
+  return screens
+end
+
+hs.hotkey.bind({'cmd', 'ctrl'}, 'L', function()
+  local screens = screens_table()
 
   local mini_player_width = 288
   local screen_width = screens[1]:frame().w
