@@ -3,7 +3,8 @@
 alias l=lsd
 alias ll='l -l'
 alias la='ll -A'
-alias lt='l --tree'
+alias lt='ll -t'
+alias ltree='l --tree'
 alias be='bundle exec'
 
 function mkcd() {
