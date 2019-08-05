@@ -56,6 +56,8 @@ nmap <Leader>f :Files<CR>
 nmap <Leader>b :Buffers<CR>
 nmap <Leader>m :Marks<CR>
 nmap , :noh<CR>
+nmap <Leader>rf :call DispatchWait('rubocop %')<CR>
+nmap <Leader>ru :call DispatchWait('rubocop')<CR>
 nmap <Leader>T :tabe term://bash -l<CR>
 map <silent> <Leader>tf :TestFile<CR>
 map <silent> <Leader>ts :TestSuite<CR>
