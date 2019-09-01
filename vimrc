@@ -42,7 +42,6 @@ let g:vimwiki_list = [{'path': vimwiki_path}]
 let g:nv_search_paths = [vimwiki_path]
 
 set runtimepath+=/usr/local/opt/fzf
-set completefunc=emoji#complete
 
 if has("termguicolors")
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -65,3 +64,6 @@ map <silent> <Leader>ts :TestSuite<CR>
 map <silent> <Leader>tl :TestLast<CR>
 map <silent> <Leader>tn :TestNearest<CR>
 map <silent> <Leader>tv :TestVisit<CR>
+imap <expr> <c-Space> fzf#vim#complete(fzf#wrap({
+  \ 'source': { -> emoji#list() },
+  \ 'reducer': { emoji_names -> join(map(emoji_names, { key, val -> emoji#for(val) } )) }}))
