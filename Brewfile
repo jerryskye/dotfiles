@@ -21,6 +21,6 @@ brew "vitorgalvao/tiny-scripts/cask-repair"
 
 cask "font-hack-nerd-font"
 cask "hammerspoon"
-cask "iterm2"
 cask "keybase"
 cask "xscreensaver"
+cask "alacritty"
