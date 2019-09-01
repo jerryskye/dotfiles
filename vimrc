@@ -42,6 +42,7 @@ let g:vimwiki_list = [{'path': vimwiki_path}]
 let g:nv_search_paths = [vimwiki_path]
 
 set runtimepath+=/usr/local/opt/fzf
+set completefunc=emoji#complete
 
 if has("termguicolors")
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
