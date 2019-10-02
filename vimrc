@@ -36,10 +36,6 @@ let g:tmuxline_preset = {
 let test#custom_strategies = {'dispatch_wait': function('DispatchWait')}
 let test#strategy = 'dispatch_wait'
 let test#ruby#use_binstubs = 0
-let vimwiki_path = '/keybase/private/jerryskye/vimwiki/'
-let g:nv_default_extension = '.wiki'
-let g:vimwiki_list = [{'path': vimwiki_path}]
-let g:nv_search_paths = [vimwiki_path]
 
 set runtimepath+=/usr/local/opt/fzf
 
