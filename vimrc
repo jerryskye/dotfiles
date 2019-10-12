@@ -17,7 +17,6 @@ if has("nvim")
   set inccommand=nosplit
   set packpath+=~/.vim
 endif
-highlight LineNr ctermbg=black ctermfg=white
 set nocompatible
 
 function! DispatchWait(cmd)
