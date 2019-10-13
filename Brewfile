@@ -14,6 +14,7 @@ brew "gnupg"
 brew "lsd"
 brew "neovim"
 brew "pinentry-mac"
+brew "rbenv"
 brew "ripgrep"
 brew "tmux", args: ["build-from-source"]
 brew "thoughtbot/formulae/rcm"
