@@ -1,7 +1,3 @@
 Host mailserver
   User root
   HostName mail.siedlarz.com
-
-Host ec2-ohio
-  User jaro
-  HostName 18.224.173.47
