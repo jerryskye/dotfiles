@@ -81,3 +81,6 @@
 [submodule "vim/pack/plugins/start/vim-emoji"]
 	path = vim/pack/plugins/start/vim-emoji
 	url = git@github.com:junegunn/vim-emoji.git
+[submodule "vim/pack/plugins/start/vim-rails"]
+	path = vim/pack/plugins/start/vim-rails
+	url = git@github.com:tpope/vim-rails.git
