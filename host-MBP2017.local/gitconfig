@@ -1,0 +1,12 @@
+[user]
+	name = jerryskye
+	email = jaroslaw.siedlarz@netguru.com
+	signingkey = 8395AE4FAECD8AA1
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
+[rerere]
+	enabled = true
+[alias]
+	majonez = !branch="$(git rev-parse --abbrev-ref HEAD)" && git checkout master && git pull && git branch -d "$branch"
