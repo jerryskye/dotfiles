@@ -23,7 +23,7 @@
 	url = git@github.com:rhysd/vim-crystal.git
 	branch = master
 [submodule "vim/pack/plugins/opt/vim-elixir"]
-	path = vim/pack/plugins/opt/vim-elixir
+	path = vim/pack/plugins/start/vim-elixir
 	url = git@github.com:elixir-editors/vim-elixir.git
 	branch = master
 [submodule "vim/pack/plugins/opt/vim-slim"]
