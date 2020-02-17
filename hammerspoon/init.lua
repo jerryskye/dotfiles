@@ -14,7 +14,7 @@ hs.hotkey.bind({'cmd', 'ctrl'}, 'M', function()
 end)
 
 hs.hotkey.bind({'cmd', 'ctrl'}, 'T', function()
-  hs.application.launchOrFocus('Alacritty')
+  hs.application.launchOrFocus('kitty')
 end)
 
 hs.hotkey.bind({'cmd', 'ctrl'}, 'W', function()
@@ -71,7 +71,7 @@ hs.hotkey.bind({'cmd', 'ctrl'}, 'L', function()
     {"Messages", nil, screens[1], {x1=0.2, y1=0, x2=mini_player_unit_x1, y2=0.66}, nil, nil},
     {"Slack", nil, screens[1], {x1=0, y1=0, x2=mini_player_unit_x1, y2=1}, nil, nil}
   })
-  fullScreenAppMainWindow('Alacritty', screens[3])
+  fullScreenAppMainWindow('kitty', screens[3])
 end)
 
 hs.hotkey.bind({'cmd', 'ctrl'}, ';', function()
@@ -79,6 +79,6 @@ hs.hotkey.bind({'cmd', 'ctrl'}, ';', function()
 
   hs.layout.apply({
     {"Firefox", nil, screens[2], hs.layout.left50, nil, nil},
-    {"Alacritty", nil, screens[2], hs.layout.right50, nil, nil},
+    {"kitty", nil, screens[2], hs.layout.right50, nil, nil},
   })
 end)
