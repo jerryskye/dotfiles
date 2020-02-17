@@ -33,13 +33,6 @@ hs.hotkey.bind({'cmd', 'ctrl'}, 'P', function()
   end)
 end)
 
-function fullScreenAppMainWindow(app_name, screen)
-  local app = hs.application.find(app_name)
-  if app then
-    app:mainWindow():moveToScreen(screen):setFullScreen(true)
-  end
-end
-
 function distanceFromPrimaryScreen(screen)
   return hs.geometry.point(screen:position()):distance(0, 0)
 end
@@ -69,9 +62,9 @@ hs.hotkey.bind({'cmd', 'ctrl'}, 'L', function()
     {"Music", "Mini Player", screens[1], {mini_player_unit_x1, 0, mini_player_unit_w, 1}, nil, nil},
     {"Music", "Music", screens[1], '0,0, 0.92,1', nil, nil},
     {"Messages", nil, screens[1], {x1=0.2, y1=0, x2=mini_player_unit_x1, y2=0.66}, nil, nil},
-    {"Slack", nil, screens[1], {x1=0, y1=0, x2=mini_player_unit_x1, y2=1}, nil, nil}
+    {"Slack", nil, screens[1], {x1=0, y1=0, x2=mini_player_unit_x1, y2=1}, nil, nil},
+    {"kitty", nil, screens[3], hs.layout.maximized, nil, nil}
   })
-  fullScreenAppMainWindow('kitty', screens[3])
 end)
 
 hs.hotkey.bind({'cmd', 'ctrl'}, ';', function()
