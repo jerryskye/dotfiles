@@ -20,10 +20,6 @@ export HISTSIZE=10000
 export HISTCONTROL=ignoredups:erasedups:ignorespace
 shopt -s histappend
 
-SUCCESS_EMOJI=$'❤️\001 \002'
-FAILURE_EMOJI="💔"
-PROMPT_COMMAND='if [ $? -eq 0 ]; then exitstatus="$SUCCESS_EMOJI"; else exitstatus="$FAILURE_EMOJI"; fi'
-PS1="\[\033[1;34m\]\u@\h\[\033[0;31m\][\$(rbenv version-name)]:\[\033[1;33m\]\w\[\033[0;10m\] \$exitstatus "
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
@@ -38,4 +34,4 @@ fi
 eval "$(rbenv init -)"
 
 [ -f "$HOME/.profile" ] && . "$HOME/.profile" # Source .profile last to allow host-specific overrides
-true
+eval "$(starship init bash)"
