@@ -16,6 +16,7 @@ brew "neovim"
 brew "pinentry-mac"
 brew "rbenv"
 brew "ripgrep"
+brew "starship"
 brew "tmux", args: ["build-from-source"]
 brew "thoughtbot/formulae/rcm"
 brew "vitorgalvao/tiny-scripts/cask-repair"
