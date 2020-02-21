@@ -31,7 +31,9 @@ if [ -s "$HOME/.fzf.bash" ]; then
   export FZF_DEFAULT_COMMAND='rg --files --hidden'
 fi
 
-eval "$(rbenv init -)"
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh
+starship_precmd_user_func="chruby_auto"
 
 [ -f "$HOME/.profile" ] && . "$HOME/.profile" # Source .profile last to allow host-specific overrides
 eval "$(starship init bash)"

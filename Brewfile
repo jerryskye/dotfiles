@@ -14,7 +14,7 @@ brew "gnupg"
 brew "lsd"
 brew "neovim"
 brew "pinentry-mac"
-brew "rbenv"
+brew "chruby"
 brew "ripgrep"
 brew "starship"
 brew "tmux", args: ["build-from-source"]
