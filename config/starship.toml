@@ -2,3 +2,8 @@
 symbol = "❤️"
 error_symbol = "💔"
 use_symbol_for_status = true
+
+[battery]
+full_symbol = "🔋"
+charging_symbol = "⚡️"
+discharging_symbol = "💀"
