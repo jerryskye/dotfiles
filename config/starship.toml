@@ -1,3 +1,6 @@
+[line_break]
+disabled = true
+
 [character]
 symbol = "❤️"
 error_symbol = "💔"
