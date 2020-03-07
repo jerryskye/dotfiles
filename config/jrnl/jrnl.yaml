@@ -1,0 +1,13 @@
+default_hour: 22
+default_minute: 0
+editor: nvim
+encrypt: false
+highlight: true
+indent_character: '|'
+journals:
+  default: /Volumes/Keybase/private/jerryskye/journal.txt
+linewrap: 79
+tagsymbols: '@'
+template: false
+timeformat: '%Y-%m-%d %H:%M'
+version: v2.2
