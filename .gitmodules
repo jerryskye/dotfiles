@@ -26,8 +26,8 @@
 	path = vim/pack/plugins/start/vim-elixir
 	url = git@github.com:elixir-editors/vim-elixir.git
 	branch = master
-[submodule "vim/pack/plugins/opt/vim-slim"]
-	path = vim/pack/plugins/opt/vim-slim
+[submodule "vim/pack/plugins/start/vim-slim"]
+	path = vim/pack/plugins/start/vim-slim
 	url = git@github.com:slim-template/vim-slim.git
 	branch = master
 [submodule "vim/pack/plugins/opt/vim-vue"]
