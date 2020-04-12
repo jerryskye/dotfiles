@@ -1,7 +1,3 @@
 Host mailserver
   User root
   HostName mail.siedlarz.com
-
-Host honeyjar
-  User jaro
-  HostName 192.166.219.13
