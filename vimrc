@@ -19,10 +19,6 @@ if has("nvim")
 endif
 set nocompatible
 
-function! DispatchWait(cmd)
-  execute "Start! -wait=always " . a:cmd . " || tput bel"
-endfunction
-
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:tmuxline_preset = {
@@ -32,8 +28,6 @@ let g:tmuxline_preset = {
       \'x'    : '%a',
       \'y'    : '%H%M hrs',
       \'z'    : '#(pmset -g batt | grep -o "[0-9]*%%")'}
-let test#custom_strategies = {'dispatch_wait': function('DispatchWait')}
-let test#strategy = 'dispatch_wait'
 let test#ruby#use_binstubs = 0
 
 set runtimepath+=/usr/local/opt/fzf
@@ -53,8 +47,8 @@ nmap <Leader>f :Files<CR>
 nmap <Leader>b :Buffers<CR>
 nmap <Leader>m :Marks<CR>
 nmap , :noh<CR>
-nmap <Leader>rf :call DispatchWait('rubocop %')<CR>
-nmap <Leader>ru :call DispatchWait('rubocop')<CR>
+nmap <Leader>rf :tabe term://rubocop %<CR>
+nmap <Leader>ru :tabe term://rubocop<CR>
 nmap <Leader>T :tabe term://bash -l<CR>
 map <silent> <Leader>tf :TestFile<CR>
 map <silent> <Leader>ts :TestSuite<CR>
