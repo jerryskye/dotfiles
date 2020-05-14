@@ -84,3 +84,7 @@
 [submodule "vim/pack/plugins/start/vim-rails"]
 	path = vim/pack/plugins/start/vim-rails
 	url = git@github.com:tpope/vim-rails.git
+[submodule "vim/pack/plugins/start/vim-unimpaired"]
+	path = vim/pack/plugins/start/vim-unimpaired
+	url = git@github.com:tpope/vim-unimpaired.git
+	branch = master
