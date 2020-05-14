@@ -1,3 +1,8 @@
+colors:
+  body: none
+  date: YELLOW
+  tags: BLUE
+  title: none
 default_hour: 22
 default_minute: 0
 editor: nvim
