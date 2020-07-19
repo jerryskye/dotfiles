@@ -7,6 +7,7 @@ alias lt='ll -t'
 alias ltree='l --tree'
 alias be='bundle exec'
 alias tf='terraform'
+alias g='git'
 
 function mkcd() {
   mkdir -p $1 && cd $1
