@@ -64,6 +64,7 @@ hs.hotkey.bind({'cmd', 'ctrl'}, 'L', function()
     {"Music", "Music", screens[1], '0,0, 0.92,1', nil, nil},
     {"Messages", nil, screens[1], {x1=0.2, y1=0, x2=mini_player_unit_x1, y2=0.66}, nil, nil},
     {"Slack", nil, screens[1], {x1=0, y1=0, x2=mini_player_unit_x1, y2=1}, nil, nil},
+    {"Discord", nil, screens[1], {x1=0, y1=0, x2=mini_player_unit_x1, y2=1}, nil, nil},
     {"kitty", nil, screens[3], hs.layout.maximized, nil, nil}
   })
 end)
