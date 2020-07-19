@@ -10,5 +10,12 @@
 	enabled = true
 [alias]
 	majonez = !branch="$(git rev-parse --abbrev-ref HEAD)" && git checkout master && git pull && git branch -d "$branch"
+	status = s
+	diff = d
+	add = a
+	branch = br
+	checkout = co
+	ci = commit
+	log = l
 [pull]
 	rebase = false
