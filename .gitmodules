@@ -88,3 +88,7 @@
 	path = vim/pack/plugins/start/vim-unimpaired
 	url = git@github.com:tpope/vim-unimpaired.git
 	branch = master
+[submodule "vim/pack/plugins/start/vim-terraform"]
+	path = vim/pack/plugins/start/vim-terraform
+	url = git@github.com:hashivim/vim-terraform.git
+	branch = master
