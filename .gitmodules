@@ -92,3 +92,6 @@
 	path = vim/pack/plugins/start/vim-terraform
 	url = git@github.com:hashivim/vim-terraform.git
 	branch = master
+[submodule "fast-syntax-highlighting"]
+	path = fast-syntax-highlighting
+	url = git@github.com:zdharma/fast-syntax-highlighting.git

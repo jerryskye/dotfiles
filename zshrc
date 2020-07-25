@@ -49,6 +49,7 @@ source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
 precmd_functions+=(chruby_auto)
 
+source "$HOME/.fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh"
 
 [ -f "$HOME/.profile" ] && . "$HOME/.profile" # Source .profile last to allow host-specific overrides
 eval "$(starship init zsh)"

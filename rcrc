@@ -1,1 +1,1 @@
-SYMLINK_DIRS="vim/pack/plugins/start/* vim/pack/plugins/opt/* hammerspoon/Spoons/*"
+SYMLINK_DIRS="fast-syntax-highlighting vim/pack/plugins/start/* vim/pack/plugins/opt/* hammerspoon/Spoons/*"
