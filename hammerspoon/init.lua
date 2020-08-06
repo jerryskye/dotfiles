@@ -59,13 +59,13 @@ hs.hotkey.bind({'cmd', 'ctrl'}, 'L', function()
   local mini_player_unit_w = mini_player_width / screen_width
   local mini_player_unit_x1 = 1 - mini_player_unit_w
   hs.layout.apply({
-    {"Firefox", nil, screens[2], hs.layout.maximized, nil, nil},
-    {"Music", "Mini Player", screens[1], {mini_player_unit_x1, 0, mini_player_unit_w, 1}, nil, nil},
-    {"Music", "Music", screens[1], '0,0, 0.92,1', nil, nil},
-    {"Messages", nil, screens[1], {x1=0.2, y1=0, x2=mini_player_unit_x1, y2=0.66}, nil, nil},
+    {"Firefox", nil, screens[1], hs.layout.maximized, nil, nil},
+    {"Music", "Mini Player", screens[2], {mini_player_unit_x1, 0, mini_player_unit_w, 1}, nil, nil},
+    {"Music", "Music", screens[2], '0,0, 0.92,1', nil, nil},
+    {"Messages", nil, screens[2], {x1=0.2, y1=0, x2=mini_player_unit_x1, y2=0.66}, nil, nil},
     {"Slack", nil, screens[1], {x1=0, y1=0, x2=mini_player_unit_x1, y2=1}, nil, nil},
-    {"Discord", nil, screens[1], {x1=0, y1=0, x2=mini_player_unit_x1, y2=1}, nil, nil},
-    {"kitty", nil, screens[3], hs.layout.maximized, nil, nil}
+    {"Discord", nil, screens[2], {x1=0, y1=0, x2=mini_player_unit_x1, y2=1}, nil, nil},
+    {"kitty", nil, screens[1], hs.layout.maximized, nil, nil}
   })
 end)
 
@@ -73,7 +73,7 @@ hs.hotkey.bind({'cmd', 'ctrl'}, ';', function()
   local screens = screens_table()
 
   hs.layout.apply({
-    {"Firefox", nil, screens[2], hs.layout.left50, nil, nil},
-    {"kitty", nil, screens[2], hs.layout.right50, nil, nil},
+    {"Firefox", nil, screens[1], hs.layout.left50, nil, nil},
+    {"kitty", nil, screens[1], hs.layout.right50, nil, nil},
   })
 end)
