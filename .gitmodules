@@ -95,3 +95,6 @@
 [submodule "fast-syntax-highlighting"]
 	path = fast-syntax-highlighting
 	url = git@github.com:zdharma/fast-syntax-highlighting.git
+[submodule "vim/pack/plugins/start/vim-qargs"]
+	path = vim/pack/plugins/start/vim-qargs
+	url = git@github.com:nelstrom/vim-qargs.git
