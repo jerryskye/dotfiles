@@ -2,7 +2,7 @@
 disabled = true
 
 [character]
-symbol = "❤️"
+symbol = "💚"
 error_symbol = "💔"
 use_symbol_for_status = true
 
