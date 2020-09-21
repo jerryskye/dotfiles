@@ -1,13 +1,8 @@
 hs.loadSpoon('ControlEscape'):start()
-local vim_mode = hs.loadSpoon('VimMode')
 hs.window.setFrameCorrectness = true
 
 hs.hotkey.bind({'cmd', 'ctrl'}, 'R', function()
   hs.reload()
-end)
-
-hs.hotkey.bind({'cmd', 'ctrl'}, '\\', function()
-  vim_mode:enter()
 end)
 
 hs.hotkey.bind({'cmd', 'ctrl'}, 'M', function()

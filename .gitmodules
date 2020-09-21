@@ -2,10 +2,6 @@
 	path = hammerspoon/Spoons/ControlEscape.spoon
 	url = git@github.com:jasonrudolph/ControlEscape.spoon.git
 	branch = master
-[submodule "hammerspoon/Spoons/VimMode.spoon"]
-	path = hammerspoon/Spoons/VimMode.spoon
-	url = git@github.com:dbalatero/VimMode.spoon.git
-	branch = master
 [submodule "vim/pack/plugins/opt/brew.vim"]
 	path = vim/pack/plugins/opt/brew.vim
 	url = git@github.com:xu-cheng/brew.vim.git
