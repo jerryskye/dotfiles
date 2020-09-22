@@ -94,3 +94,6 @@
 [submodule "vim/pack/plugins/start/vim-qargs"]
 	path = vim/pack/plugins/start/vim-qargs
 	url = git@github.com:nelstrom/vim-qargs.git
+[submodule "vim/pack/plugins/start/vim-projectionist"]
+	path = vim/pack/plugins/start/vim-projectionist
+	url = git@github.com:tpope/vim-projectionist.git
