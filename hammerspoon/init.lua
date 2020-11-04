@@ -1,4 +1,3 @@
-hs.loadSpoon('ControlEscape'):start()
 hs.window.setFrameCorrectness = true
 
 hs.hotkey.bind({'cmd', 'ctrl'}, 'R', function()
