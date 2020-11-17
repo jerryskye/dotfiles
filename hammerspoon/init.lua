@@ -9,7 +9,7 @@ hs.hotkey.bind({'cmd', 'ctrl'}, 'M', function()
 end)
 
 hs.hotkey.bind({'cmd', 'ctrl'}, 'T', function()
-  hs.application.launchOrFocus('kitty')
+  hs.application.launchOrFocus('Alacritty')
 end)
 
 hs.hotkey.bind({'cmd', 'ctrl'}, 'W', function()
