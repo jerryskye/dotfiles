@@ -14,3 +14,6 @@ discharging_symbol = "💀"
 [time]
 disabled = false
 time_format = "%H%M hrs"
+
+[git_status]
+disabled = true
