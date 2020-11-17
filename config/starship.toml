@@ -4,6 +4,7 @@ disabled = true
 [character]
 success_symbol = "💚"
 error_symbol = "💔"
+vicmd_symbol = "❮ "
 use_symbol_for_status = true
 
 [battery]
