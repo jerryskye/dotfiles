@@ -1,4 +1,3 @@
-tap "thoughtbot/formulae"
 tap "vitorgalvao/tiny-scripts"
 tap "homebrew/cask-fonts"
 
@@ -18,8 +17,8 @@ brew "pinentry-mac"
 brew "chruby"
 brew "ripgrep"
 brew "starship"
-brew "tmux", args: ["build-from-source"]
-brew "thoughtbot/formulae/rcm"
+brew "tmux"
+brew "rcm"
 brew "vitorgalvao/tiny-scripts/cask-repair"
 
 cask "font-hack-nerd-font"
