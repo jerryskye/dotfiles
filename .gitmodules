@@ -93,3 +93,7 @@
 [submodule "vim/pack/plugins/start/vim-projectionist"]
 	path = vim/pack/plugins/start/vim-projectionist
 	url = git@github.com:tpope/vim-projectionist.git
+[submodule "vim/pack/plugins/start/vim-commentary"]
+	path = vim/pack/plugins/start/vim-commentary
+	url = git@github.com:tpope/vim-commentary.git
+	branch = master
