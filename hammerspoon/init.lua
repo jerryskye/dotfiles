@@ -71,3 +71,7 @@ hs.hotkey.bind({'cmd', 'ctrl'}, ';', function()
     {"Alacritty", nil, screens[1], hs.layout.right50, nil, nil},
   })
 end)
+
+hs.hotkey.bind({'cmd', 'ctrl'}, 'return', function()
+  hs.caffeinate.startScreensaver()
+end)
