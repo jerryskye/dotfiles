@@ -56,6 +56,7 @@ map <silent> <Leader>ts :TestSuite<CR>
 map <silent> <Leader>tl :TestLast<CR>
 map <silent> <Leader>tn :TestNearest<CR>
 map <silent> <Leader>tv :TestVisit<CR>
+map <silent> <Leader>g :G<CR>
 imap <expr> <c-Space> fzf#vim#complete(fzf#wrap({
   \ 'source': { -> emoji#list() },
   \ 'reducer': { emoji_names -> join(map(emoji_names, { key, val -> emoji#for(val) } )) }}))
