@@ -60,3 +60,4 @@ map <silent> <Leader>g :G<CR>
 imap <expr> <c-Space> fzf#vim#complete(fzf#wrap({
   \ 'source': { -> emoji#list() },
   \ 'reducer': { emoji_names -> join(map(emoji_names, { key, val -> emoji#for(val) } )) }}))
+inoremap <silent><expr> <tab> coc#refresh()
