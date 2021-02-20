@@ -30,6 +30,8 @@ let g:tmuxline_preset = {
       \'y'    : '%H%M hrs',
       \'z'    : '#(pmset -g batt | grep -o "[0-9]*%%")'}
 let test#ruby#use_binstubs = 0
+let g:ranger_map_keys = 0
+let g:ranger_replace_netrw = 1
 
 set runtimepath+=/usr/local/opt/fzf
 
@@ -61,3 +63,4 @@ imap <expr> <c-Space> fzf#vim#complete(fzf#wrap({
   \ 'source': { -> emoji#list() },
   \ 'reducer': { emoji_names -> join(map(emoji_names, { key, val -> emoji#for(val) } )) }}))
 inoremap <silent><expr> <tab> coc#refresh()
+map <leader>F :Ranger<CR>

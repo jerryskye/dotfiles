@@ -94,3 +94,11 @@
 	path = vim/pack/plugins/start/coc.nvim
 	url = git@github.com:neoclide/coc.nvim.git
 	branch = release
+[submodule "vim/pack/plugins/start/ranger.vim"]
+	path = vim/pack/plugins/start/ranger.vim
+	url = git@github.com:francoiscabrol/ranger.vim.git
+	branch = master
+[submodule "vim/pack/plugins/start/bclose.vim"]
+	path = vim/pack/plugins/start/bclose.vim
+	url = git@github.com:rbgrouleff/bclose.vim
+	branch = master
