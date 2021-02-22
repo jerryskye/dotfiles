@@ -30,6 +30,7 @@ let g:tmuxline_preset = {
       \'y'    : '%H%M hrs',
       \'z'    : '#(pmset -g batt | grep -o "[0-9]*%%")'}
 let test#ruby#use_binstubs = 0
+let g:bclose_no_plugin_maps = 1
 let g:ranger_map_keys = 0
 let g:ranger_replace_netrw = 1
 
