@@ -24,6 +24,7 @@ export HISTSIZE=50000
 export SAVEHIST=$HISTSIZE
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
+PROMPT_EOL_MARK=""
 
 setopt BANG_HIST                 # Treat the '!' character specially during expansion.
 setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
