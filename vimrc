@@ -44,8 +44,11 @@ endif
 colorscheme base16-default-dark
 autocmd VimLeave * mksession! ~/.vim/Session.vim
 
+command -bang -nargs=* Rgf call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case --fixed-strings ".shellescape(<q-args>), 1, <bang>0)
 command -bang -nargs=* Rgh call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case --hidden ".shellescape(<q-args>), 1, <bang>0)
+command -bang -nargs=* Rghf call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case --hidden --fixed-strings ".shellescape(<q-args>), 1, <bang>0)
 command -bang -nargs=* Rga call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case --hidden --no-ignore ".shellescape(<q-args>), 1, <bang>0)
+command -bang -nargs=* Rgaf call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case --hidden --no-ignore --fixed-strings ".shellescape(<q-args>), 1, <bang>0)
 let mapleader=";"
 nmap <Leader>f :Files<CR>
 nmap <Leader>b :Buffers<CR>
