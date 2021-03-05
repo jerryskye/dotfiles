@@ -4,6 +4,7 @@ alias l=lsd
 alias ll='l -l'
 alias la='ll -A'
 alias lt='ll -t'
+alias ltr='ll -tr'
 alias ltree='l --tree'
 alias be='bundle exec'
 alias tf='terraform'
