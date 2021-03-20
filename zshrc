@@ -19,6 +19,7 @@ bindkey -v
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export EDITOR=nvim
+export MANPAGER="nvim -c 'set ft=man' -"
 export GPG_TTY=$(tty)
 export KEYTIMEOUT=5
 export HISTSIZE=50000
