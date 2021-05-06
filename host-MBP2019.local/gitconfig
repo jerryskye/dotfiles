@@ -20,3 +20,5 @@
 	rebase = false
 [gc]
 	autoDetach = false
+[diff]
+	colorMoved = default
