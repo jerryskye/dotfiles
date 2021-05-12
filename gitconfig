@@ -17,6 +17,7 @@
 	co = checkout
 	ci = commit
 	l = log
+	rb = rebase
 [pull]
 	rebase = false
 [gc]
