@@ -9,7 +9,6 @@
 [rerere]
 	enabled = true
 [alias]
-	majonez = !branch="$(git rev-parse --abbrev-ref HEAD)" && git checkout master && git pull && git branch -d "$branch"
 	s = status
 	d = diff
 	a = add
