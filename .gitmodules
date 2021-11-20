@@ -82,7 +82,7 @@
 	branch = master
 [submodule "fast-syntax-highlighting"]
 	path = fast-syntax-highlighting
-	url = git@github.com:zdharma/fast-syntax-highlighting.git
+	url = git@github.com:zdharma-continuum/fast-syntax-highlighting.git
 [submodule "vim/pack/plugins/start/vim-projectionist"]
 	path = vim/pack/plugins/start/vim-projectionist
 	url = git@github.com:tpope/vim-projectionist.git
