@@ -24,6 +24,7 @@ export GPG_TTY=$(tty)
 export KEYTIMEOUT=5
 export HISTSIZE=50000
 export SAVEHIST=$HISTSIZE
+export HISTFILE=~/.zsh_history
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 PROMPT_EOL_MARK=""
