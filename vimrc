@@ -13,7 +13,6 @@ set updatetime=600
 set ignorecase
 set smartcase
 set noshowmode
-set relativenumber
 if has("nvim")
   set inccommand=nosplit
   set packpath+=~/.vim
