@@ -17,8 +17,7 @@ hs.hotkey.bind({'cmd', 'ctrl'}, 'W', function()
 end)
 
 hs.hotkey.bind({'cmd', 'ctrl'}, 'S', function()
-  local slackWindows = hs.application.open('Slack'):allWindows()
-  slackWindows[#slackWindows]:focus()
+  hs.application.open('Slack'):activate(true)
 end)
 
 hs.hotkey.bind({'cmd', 'ctrl'}, 'P', function()
