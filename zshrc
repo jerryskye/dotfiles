@@ -50,7 +50,5 @@ if [ -s "$HOME/.fzf.zsh" ]; then
   export FZF_DEFAULT_COMMAND='rg --files --hidden'
 fi
 
-source "$HOME/.fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh"
-
 [ -f "$HOME/.profile" ] && . "$HOME/.profile" # Source .profile last to allow host-specific overrides
 eval "$(starship init zsh)"
