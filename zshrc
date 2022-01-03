@@ -45,10 +45,8 @@ if type brew &>/dev/null; then
   compinit
 fi
 
-if [ -s "$HOME/.fzf.zsh" ]; then
-  source "$HOME/.fzf.zsh"
-  export FZF_DEFAULT_COMMAND='rg --files --hidden'
-fi
+[ -s "$HOME/.fzf.zsh" ] && . "$HOME/.fzf.zsh"
+export FZF_DEFAULT_COMMAND='rg --files --hidden'
 
 [ -f "$HOME/.profile" ] && . "$HOME/.profile" # Source .profile last to allow host-specific overrides
 eval "$(starship init zsh)"
