@@ -40,10 +40,10 @@ setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording en
 
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
-
-  autoload -Uz compinit
-  compinit
 fi
+
+autoload -Uz compinit
+compinit
 
 [ -s "$HOME/.fzf.zsh" ] && . "$HOME/.fzf.zsh"
 export FZF_DEFAULT_COMMAND='rg --files --hidden'
