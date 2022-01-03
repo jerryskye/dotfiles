@@ -57,10 +57,6 @@ nmap , :noh<CR>
 nmap <Leader>rf :tabe term://rubocop %<CR>
 nmap <Leader>ru :tabe term://rubocop<CR>
 nmap <Leader>T :tabe term://bash -l<CR>
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
 map <silent> <Leader>tf :TestFile<CR>
 map <silent> <Leader>ts :TestSuite<CR>
 map <silent> <Leader>tl :TestLast<CR>
@@ -70,5 +66,4 @@ map <silent> <Leader>g :G<CR>
 imap <expr> <c-Space> fzf#vim#complete(fzf#wrap({
   \ 'source': { -> emoji#list() },
   \ 'reducer': { emoji_names -> join(map(emoji_names, { key, val -> emoji#for(val) } )) }}))
-inoremap <silent><expr> <tab> coc#refresh()
 map <leader>F :Ranger<CR>
