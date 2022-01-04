@@ -1,4 +1,37 @@
+require('packer').startup(function()
+  use 'chriskempson/base16-vim'
+  use 'junegunn/fzf.vim'
+  use 'neovim/nvim-lspconfig'
+  use 'ojroques/nvim-lspfuzzy'
+  use {
+    'francoiscabrol/ranger.vim',
+    requires = 'rbgrouleff/bclose.vim'
+  }
+  use 'vim-airline/vim-airline'
+  use 'vim-airline/vim-airline-themes'
+  use 'tpope/vim-bundler'
+  use 'tpope/vim-commentary'
+  use 'tpope/vim-dispatch'
+  use 'elixir-editors/vim-elixir'
+  use 'junegunn/vim-emoji'
+  use 'tpope/vim-endwise'
+  use 'tpope/vim-fugitive'
+  use 'airblade/vim-gitgutter'
+  use 'tpope/vim-projectionist'
+  use 'tpope/vim-rails'
+  use 'vim-ruby/vim-ruby'
+  use 'slim-template/vim-slim'
+  use 'hashivim/vim-terraform'
+  use 'vim-test/vim-test'
+  use 'tpope/vim-unimpaired'
+
+  use { 'edkolev/tmuxline.vim', opt = true }
+  use { 'leafgarland/typescript-vim', opt = true }
+  use { 'posva/vim-vue', opt = true }
+end)
+
 vim.cmd('source ~/.vimrc')
+
 local nvim_lsp = require('lspconfig')
 
 -- Use an on_attach function to only map the following keys
@@ -42,3 +75,5 @@ for _, lsp in ipairs(servers) do
     on_attach = on_attach,
   }
 end
+
+require('lspfuzzy').setup {}
