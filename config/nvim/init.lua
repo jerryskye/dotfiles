@@ -1,6 +1,11 @@
 require('packer').startup(function()
   use 'chriskempson/base16-vim'
   use 'junegunn/fzf.vim'
+  use {
+    'lewis6991/gitsigns.nvim',
+    requires = { 'nvim-lua/plenary.nvim' },
+    config = function() require('gitsigns').setup() end
+  }
   use 'neovim/nvim-lspconfig'
   use 'ojroques/nvim-lspfuzzy'
   use {
@@ -16,7 +21,6 @@ require('packer').startup(function()
   use 'junegunn/vim-emoji'
   use 'tpope/vim-endwise'
   use 'tpope/vim-fugitive'
-  use 'airblade/vim-gitgutter'
   use 'tpope/vim-projectionist'
   use 'tpope/vim-rails'
   use 'vim-ruby/vim-ruby'
