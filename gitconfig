@@ -1,7 +1,3 @@
-[user]
-	name = jerryskye
-	email = jarek@siedlarz.com
-	signingkey = 8395AE4FAECD8AA1
 [commit]
 	gpgsign = true
 [tag]
