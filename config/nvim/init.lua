@@ -1,4 +1,5 @@
 require('packer').startup(function()
+  use 'wbthomason/packer.nvim'
   use 'chriskempson/base16-vim'
   use 'junegunn/fzf.vim'
   use {
