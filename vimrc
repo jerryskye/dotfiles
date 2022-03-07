@@ -55,6 +55,7 @@ nmap <Leader>b :Buffers<CR>
 nmap <Leader>m :Marks<CR>
 nmap , :noh<CR>
 nmap <Leader>rf :tabe term://rubocop %<CR>
+nmap <Leader>ra :tabe term://rubocop -a %<CR>
 nmap <Leader>ru :tabe term://rubocop<CR>
 nmap <Leader>T :tabe term://bash -l<CR>
 map <silent> <Leader>tf :TestFile<CR>
