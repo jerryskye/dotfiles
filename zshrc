@@ -15,6 +15,8 @@ function mkcd() {
 }
 
 bindkey -v
+bindkey "\e[A" history-beginning-search-backward
+bindkey "\e[B" history-beginning-search-forward
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
