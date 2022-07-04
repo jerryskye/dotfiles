@@ -17,6 +17,8 @@
 	rebase = false
 [gc]
 	autoDetach = false
+[init]
+	defaultBranch = main
 [diff]
 	colorMoved = default
 [url "ssh://git@github.com/"]
