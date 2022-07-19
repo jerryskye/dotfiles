@@ -45,6 +45,13 @@ function screens_table()
   return screens
 end
 
+function oldestSlackWindowByID()
+  local allSlackWindows = hs.application.find('Slack'):allWindows()
+  table.sort(allSlackWindows, function(a, b) return a:id() < b:id() end)
+  print(allSlackWindows[1]:title())
+  return {allSlackWindows[1]}
+end
+
 hs.hotkey.bind({'cmd', 'ctrl'}, 'L', function()
   local screens = screens_table()
 
@@ -56,9 +63,11 @@ hs.hotkey.bind({'cmd', 'ctrl'}, 'L', function()
     {"Firefox", nil, screens[1], hs.layout.maximized, nil, nil},
     {"Spotify", nil, screens[2], hs.layout.maximized, nil, nil},
     {"Messages", nil, screens[2], {x1=0.2, y1=0, w=0.6, h=0.66}, nil, nil},
-    {"Slack", nil, screens[2], nil, with_spotify_bar_visible, nil, options={absolute_x=true, absolute_y=true}},
+    {"Slack", "%d+:%d+", screens[1], hs.layout.maximized, nil, nil},
+    {"Slack", "screen share", screens[1], hs.layout.maximized, nil, nil},
+    {"Slack", oldestSlackWindowByID, screens[2], nil, with_spotify_bar_visible, nil, options={absolute_x=true, absolute_y=true}},
     {"Alacritty", nil, screens[1], hs.layout.maximized, nil, nil}
-  })
+  }, string.match)
 end)
 
 hs.hotkey.bind({'cmd', 'ctrl'}, ';', function()
