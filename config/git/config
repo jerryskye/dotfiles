@@ -14,7 +14,7 @@
 	l = log
 	rb = rebase
 [pull]
-	rebase = false
+	rebase = true
 [gc]
 	autoDetach = false
 [init]
