@@ -10,7 +10,7 @@ encrypt: false
 highlight: true
 indent_character: '|'
 journals:
-  default: /Volumes/Keybase/private/jerryskye/journal.txt
+  default: /mnt/d/Documents/journal.txt
 linewrap: 79
 tagsymbols: '@'
 template: false
