@@ -13,6 +13,7 @@
 	ci = commit
 	l = log
 	rb = rebase
+	p = pull --no-rebase
 [pull]
 	rebase = true
 [gc]
