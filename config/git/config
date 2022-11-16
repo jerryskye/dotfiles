@@ -16,8 +16,6 @@
 	p = pull --no-rebase
 [pull]
 	rebase = true
-[gc]
-	autoDetach = false
 [init]
 	defaultBranch = main
 [diff]
