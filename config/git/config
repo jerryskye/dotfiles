@@ -13,9 +13,7 @@
 	ci = commit
 	l = log
 	rb = rebase
-	p = pull --no-rebase
-[pull]
-	rebase = true
+	p = pull
 [init]
 	defaultBranch = main
 [diff]
