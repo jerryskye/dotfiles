@@ -13,6 +13,7 @@ set updatetime=600
 set ignorecase
 set smartcase
 set noshowmode
+set cursorline
 if has("nvim")
   set inccommand=nosplit
   set packpath+=~/.vim
@@ -41,7 +42,7 @@ if has("termguicolors")
   let &t_8b = "[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
-colorscheme base16-default-dark
+colorscheme base16-tomorrow-night
 autocmd VimLeave * mksession! ~/.vim/Session.vim
 
 command -bang -nargs=* Rgf call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case --fixed-strings ".shellescape(<q-args>), 1, fzf#vim#with_preview(), <bang>0)
