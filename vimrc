@@ -35,8 +35,6 @@ let g:bclose_no_plugin_maps = 1
 let g:ranger_map_keys = 0
 let g:ranger_replace_netrw = 1
 
-set runtimepath+=/usr/local/opt/fzf
-
 if has("termguicolors")
   let &t_8f = "[38;2;%lu;%lu;%lum"
   let &t_8b = "[48;2;%lu;%lu;%lum"
