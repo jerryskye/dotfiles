@@ -52,6 +52,8 @@ let mapleader=";"
 nmap <Leader>f :Files<CR>
 nmap <Leader>b :Buffers<CR>
 nmap <Leader>m :Marks<CR>
+nmap <Leader>H :History<CR>
+nmap <Leader>$ :normal $bve".p<CR>
 nmap , :noh<CR>
 nmap <Leader>rf :tabe term://rubocop %<CR>
 nmap <Leader>ra :tabe term://rubocop -a %<CR>
