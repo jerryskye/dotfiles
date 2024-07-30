@@ -1,10 +1,7 @@
 tap "vitorgalvao/tiny-scripts"
-tap "homebrew/cask-fonts"
 
 brew "openssl"
 brew "readline"
-brew "bash"
-brew "bash-completion"
 brew "coreutils"
 brew "pkg-config"
 brew "fzf"
@@ -24,6 +21,5 @@ brew "vitorgalvao/tiny-scripts/cask-repair"
 
 cask "font-hack-nerd-font"
 cask "hammerspoon"
-cask "keybase"
 cask "xscreensaver"
 cask "alacritty"

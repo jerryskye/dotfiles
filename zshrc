@@ -15,8 +15,7 @@ function mkcd() {
 }
 
 bindkey -v
-bindkey "\e[A" history-beginning-search-backward
-bindkey "\e[B" history-beginning-search-forward
+bindkey '^R' history-incremental-search-backward
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
@@ -51,4 +50,5 @@ compinit
 export FZF_DEFAULT_COMMAND='rg --files --hidden'
 
 [ -f "$HOME/.profile" ] && . "$HOME/.profile" # Source .profile last to allow host-specific overrides
+source <(fzf --zsh)
 eval "$(starship init zsh)"
