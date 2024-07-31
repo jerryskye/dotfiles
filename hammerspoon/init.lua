@@ -33,7 +33,7 @@ function distanceFromPrimaryScreen(screen)
 end
 
 function sort_screens(a, b)
-  return distanceFromPrimaryScreen(a) < distanceFromPrimaryScreen(b)
+  return distanceFromPrimaryScreen(a) > distanceFromPrimaryScreen(b)
 end
 
 function screens_table()
@@ -55,17 +55,13 @@ end
 hs.hotkey.bind({'cmd', 'ctrl'}, 'L', function()
   local screens = screens_table()
 
-  local spotify_bar_height = 90
-  local with_spotify_bar_visible = screens[2]:frame()
-  with_spotify_bar_visible.h = with_spotify_bar_visible.h - spotify_bar_height
-
   hs.layout.apply({
     {"Firefox", nil, screens[1], hs.layout.maximized, nil, nil},
-    {"Spotify", nil, screens[2], hs.layout.maximized, nil, nil},
+    {"Music", nil, screens[2], {x1=0.8, y1=0, w=0.2, h=1.0}, nil, nil},
     {"Messages", nil, screens[2], {x1=0.2, y1=0, w=0.6, h=0.66}, nil, nil},
     {"Slack", "%d+:%d+", screens[1], hs.layout.maximized, nil, nil},
     {"Slack", "screen share", screens[1], hs.layout.maximized, nil, nil},
-    {"Slack", oldestSlackWindowByID, screens[2], nil, with_spotify_bar_visible, nil, options={absolute_x=true, absolute_y=true}},
+    {"Slack", oldestSlackWindowByID, screens[2], hs.layout.maximized, nil, nil},
     {"Alacritty", nil, screens[1], hs.layout.maximized, nil, nil}
   }, string.match)
 end)
