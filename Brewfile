@@ -1,5 +1,6 @@
 tap "vitorgalvao/tiny-scripts"
 
+brew "bat"
 brew "openssl"
 brew "readline"
 brew "coreutils"
