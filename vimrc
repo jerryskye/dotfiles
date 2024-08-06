@@ -69,5 +69,5 @@ map <Leader>g :G<CR>
 imap <expr> <c-Space> fzf#vim#complete(fzf#wrap({
   \ 'source': { -> emoji#list() },
   \ 'reducer': { emoji_names -> join(map(emoji_names, { key, val -> emoji#for(val) } )) }}))
-map <leader>Rd :exe "tabe term://ranger" getcwd() "\| normal A"<CR>
-map <leader>Rf :exe "tabe term://ranger --selectfile=" .. @% "\| normal A"<CR>
+map <leader>Rd :RangerWorkingDirectory<CR>
+map <leader>Rf :Ranger<CR>
