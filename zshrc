@@ -28,6 +28,7 @@ export SAVEHIST=$HISTSIZE
 export HISTFILE=~/.zsh_history
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
+export ERL_AFLAGS="-kernel shell_history enabled"
 PROMPT_EOL_MARK=""
 
 setopt BANG_HIST                 # Treat the '!' character specially during expansion.
