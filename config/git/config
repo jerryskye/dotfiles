@@ -5,7 +5,7 @@
 [rerere]
 	enabled = true
 [alias]
-	s = status
+	s = status -sb
 	d = diff
 	a = add
 	br = branch
