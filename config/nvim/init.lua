@@ -1,3 +1,94 @@
+-- Basic Neovim configuration in Lua
+
+-- Set options
+vim.o.backspace = "indent,eol,start"
+vim.o.modelines = 0
+vim.o.ruler = true
+vim.o.window = 0
+
+-- Syntax highlighting
+vim.cmd("syntax on")
+
+-- Tab settings
+vim.o.tabstop = 2
+vim.o.shiftwidth = 2
+vim.o.number = true
+vim.o.list = true
+vim.o.listchars = "tab:>·,trail:~,extends:>,precedes:<"
+vim.o.expandtab = true
+vim.o.updatetime = 600
+vim.o.ignorecase = true
+vim.o.smartcase = true
+vim.o.showmode = false
+vim.o.cursorline = true
+
+-- Leader key
+vim.g.mapleader = ";"
+
+vim.g.airline_powerline_fonts = 1
+vim.g['airline#extensions#tabline#enabled'] = 1
+vim.g.airline_theme = 'base16'
+vim.g.tmuxline_preset = {
+  a = '#S',
+  win = '#I #W',
+  cwin = '#I #W',
+  x = '%a',
+  y = '%H%M hrs',
+  z = '#(pmset -g batt | grep -o "[0-9]*%%\")'
+}
+vim.g.test_ruby_use_binstubs = 0
+vim.g.bclose_no_plugin_maps = 1
+vim.g.ranger_map_keys = 0
+vim.g.ranger_replace_netrw = 1
+
+if vim.fn.has("termguicolors") then
+  vim.o.termguicolors = true
+end
+
+-- Theme
+vim.cmd("colorscheme base16-tomorrow-night")
+
+vim.keymap.set('n', vim.g.mapleader .. 'f', ':Files<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', vim.g.mapleader .. 'b', ':Buffers<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', vim.g.mapleader .. 'm', ':Marks<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', vim.g.mapleader .. 'H', ':History<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', vim.g.mapleader .. '$', ':normal $bve\".p<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', ',', ':noh<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', vim.g.mapleader .. 'rf', ':tabe term://rubocop %<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', vim.g.mapleader .. 'ra', ':tabe term://rubocop -a %<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', vim.g.mapleader .. 'rA', ':tabe term://rubocop -A %<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', vim.g.mapleader .. 'ru', ':tabe term://rubocop<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', vim.g.mapleader .. 'T', ':tabe term://bash -l<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', vim.g.mapleader .. 'tf', ':TestFile<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', vim.g.mapleader .. 'ts', ':TestSuite<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', vim.g.mapleader .. 'tl', ':TestLast<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', vim.g.mapleader .. 'tn', ':TestNearest<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', vim.g.mapleader .. 'tv', ':TestVisit<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', vim.g.mapleader .. 'g', ':G<CR>', { noremap = true, silent = true })
+vim.keymap.set('i', '<c-Space>', 'fzf#vim#complete(fzf#wrap({\'source\': { -> emoji#list() },\'reducer\': { emoji_names -> join(map(emoji_names, { key, val -> emoji#for(val) } )) }}))', { noremap = true, silent = true, expr = true })
+vim.keymap.set('n', vim.g.mapleader .. 'Rd', ':RangerWorkingDirectory<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', vim.g.mapleader .. 'Rf', ':Ranger<CR>', { noremap = true, silent = true })
+
+vim.api.nvim_create_user_command('Rgf', function(opts)
+  vim.cmd('call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case --fixed-strings ' .. vim.api.nvim_call_function('shellescape', {opts.args}) .. '", 1, fzf#vim#with_preview(), ' .. (opts.bang and '1' or '0') .. ')')
+end, { nargs = '*', bang = true })
+
+vim.api.nvim_create_user_command('Rgh', function(opts)
+  vim.cmd('call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case --hidden ' .. vim.api.nvim_call_function('shellescape', {opts.args}) .. '", 1, fzf#vim#with_preview(), ' .. (opts.bang and '1' or '0') .. ')')
+end, { nargs = '*', bang = true })
+
+vim.api.nvim_create_user_command('Rghf', function(opts)
+  vim.cmd('call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case --hidden --fixed-strings ' .. vim.api.nvim_call_function('shellescape', {opts.args}) .. '", 1, fzf#vim#with_preview(), ' .. (opts.bang and '1' or '0') .. ')')
+end, { nargs = '*', bang = true })
+
+vim.api.nvim_create_user_command('Rga', function(opts)
+  vim.cmd('call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case --hidden --no-ignore ' .. vim.api.nvim_call_function('shellescape', {opts.args}) .. '", 1, fzf#vim#with_preview(), ' .. (opts.bang and '1' or '0') .. ')')
+end, { nargs = '*', bang = true })
+
+vim.api.nvim_create_user_command('Rgaf', function(opts)
+  vim.cmd('call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case --hidden --no-ignore --fixed-strings ' .. vim.api.nvim_call_function('shellescape', {opts.args}) .. '", 1, fzf#vim#with_preview(), ' .. (opts.bang and '1' or '0') .. ')')
+end, { nargs = '*', bang = true })
+
 require('packer').startup(function()
   use 'wbthomason/packer.nvim'
   use 'chriskempson/base16-vim'
@@ -97,8 +188,6 @@ require('packer').startup(function()
   use { 'leafgarland/typescript-vim', opt = true }
   use { 'posva/vim-vue', opt = true }
 end)
-
-vim.cmd('source ~/.vimrc')
 
 local nvim_lsp = require('lspconfig')
 
