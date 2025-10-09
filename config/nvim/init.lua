@@ -45,9 +45,6 @@ if vim.fn.has("termguicolors") then
   vim.o.termguicolors = true
 end
 
--- Theme
-vim.cmd("colorscheme base16-tomorrow-night")
-
 vim.keymap.set('n', vim.g.mapleader .. 'f', ':Files<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', vim.g.mapleader .. 'b', ':Buffers<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', vim.g.mapleader .. 'm', ':Marks<CR>', { noremap = true, silent = true })
@@ -189,8 +186,6 @@ require('packer').startup(function()
   use { 'posva/vim-vue', opt = true }
 end)
 
-local nvim_lsp = require('lspconfig')
-
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(_, bufnr)
@@ -224,16 +219,18 @@ local on_attach = function(_, bufnr)
 
 end
 
+vim.cmd("colorscheme base16-tomorrow-night")
+
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
 local servers = { 'solargraph' }
 for _, lsp in ipairs(servers) do
-  nvim_lsp[lsp].setup {
+  vim.lsp.config(lsp , {
     on_attach = on_attach,
     flags = {
       debounce_text_changes = 150,
     }
-  }
+  })
 end
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
