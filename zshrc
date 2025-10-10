@@ -43,6 +43,7 @@ setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording en
 
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+  source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
 autoload -Uz compinit
