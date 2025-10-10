@@ -48,9 +48,6 @@ fi
 autoload -Uz compinit
 compinit
 
-[ -s "$HOME/.fzf.zsh" ] && . "$HOME/.fzf.zsh"
-export FZF_DEFAULT_COMMAND='rg --files --hidden'
-
 [ -f "$HOME/.profile" ] && . "$HOME/.profile" # Source .profile last to allow host-specific overrides
 source <(fzf --zsh)
 eval "$(starship init zsh)"
