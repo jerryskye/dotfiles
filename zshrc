@@ -1,4 +1,13 @@
 # Useful functions and aliases
+function find_brew() {
+  local prefixes=('/opt/homebrew' '/usr/local' '/home/linuxbrew/.linuxbrew')
+  for prefix in "${prefixes[@]}"; do
+    if [[ -x "$prefix/bin/brew" ]]; then
+      echo "$prefix/bin/brew"
+      return
+    fi
+  done
+}
 
 alias l=lsd
 alias ll='l -l'
@@ -21,15 +30,17 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export EDITOR=nvim
 export MANPAGER="nvim +Man!"
-export GPG_TTY=$(tty)
-export KEYTIMEOUT=5
-export HISTSIZE=50000
-export SAVEHIST=$HISTSIZE
-export HISTFILE=~/.zsh_history
-export CLICOLOR=1
-export LSCOLORS=ExFxBxDxCxegedabagacad
+export DISABLE_SPRING=1
 export ERL_AFLAGS="-kernel shell_history enabled"
 export CARGO_NET_GIT_FETCH_WITH_CLI=true
+export RUBY_YJIT_ENABLE=1
+export GPG_TTY=$(tty)
+KEYTIMEOUT=5
+HISTSIZE=50000
+SAVEHIST=$HISTSIZE
+HISTFILE=~/.zsh_history
+CLICOLOR=1
+LSCOLORS=ExFxBxDxCxegedabagacad
 PROMPT_EOL_MARK=""
 
 setopt BANG_HIST                 # Treat the '!' character specially during expansion.
@@ -41,9 +52,21 @@ setopt HIST_IGNORE_SPACE         # Don't record an entry starting with a space.
 setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history file.
 setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
 
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
-  source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+brew_executable=$(find_brew)
+
+if [ -n "$brew_executable" ]; then
+  export HOMEBREW_NO_INSTALL_CLEANUP=1
+  export HOMEBREW_NO_AUTO_UPDATE=1
+
+  eval "$($brew_executable shellenv)"
+  brew_prefix=$(brew --prefix)
+  FPATH=$brew_prefix/share/zsh/site-functions:$FPATH
+  source $brew_prefix/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+  chruby_install_dir=$(brew --prefix chruby)
+  source $chruby_install_dir/share/chruby/chruby.sh
+  source $chruby_install_dir/share/chruby/auto.sh
+  starship_precmd_user_func="chruby_auto"
 fi
 
 autoload -Uz compinit
