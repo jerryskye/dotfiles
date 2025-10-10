@@ -65,6 +65,7 @@ vim.keymap.set('n', vim.g.mapleader .. 'g', ':G<CR>', { noremap = true, silent =
 vim.keymap.set('i', '<c-Space>', 'fzf#vim#complete(fzf#wrap({\'source\': { -> emoji#list() },\'reducer\': { emoji_names -> join(map(emoji_names, { key, val -> emoji#for(val) } )) }}))', { noremap = true, silent = true, expr = true })
 vim.keymap.set('n', vim.g.mapleader .. 'Rd', ':RangerWorkingDirectory<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', vim.g.mapleader .. 'Rf', ':Ranger<CR>', { noremap = true, silent = true })
+vim.keymap.set('x', '@', ':<C-u>echo "@".getcmdline() | execute ":\'<,\'>normal @" . nr2char(getchar())<CR>', { noremap = true, silent = true })
 
 vim.api.nvim_create_user_command('Rgf', function(opts)
   vim.cmd('call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case --fixed-strings ' .. vim.api.nvim_call_function('shellescape', {opts.args}) .. '", 1, fzf#vim#with_preview(), ' .. (opts.bang and '1' or '0') .. ')')
