@@ -1,3 +1,4 @@
+brew "aria2"
 brew "bat"
 brew "openssl"
 brew "readline"
