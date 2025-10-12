@@ -55,6 +55,7 @@ setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording en
 brew_executable=$(find_brew)
 
 if [ -n "$brew_executable" ]; then
+  export HOMEBREW_BAT=1
   export HOMEBREW_NO_INSTALL_CLEANUP=1
   export HOMEBREW_NO_AUTO_UPDATE=1
 
