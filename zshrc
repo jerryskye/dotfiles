@@ -64,10 +64,7 @@ if [ -n "$brew_executable" ]; then
   FPATH=$brew_prefix/share/zsh/site-functions:$FPATH
   source $brew_prefix/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-  chruby_install_dir=$(brew --prefix chruby)
-  source $chruby_install_dir/share/chruby/chruby.sh
-  source $chruby_install_dir/share/chruby/auto.sh
-  starship_precmd_user_func="chruby_auto"
+  eval "$(rv shell init zsh)"
 fi
 
 autoload -Uz compinit
