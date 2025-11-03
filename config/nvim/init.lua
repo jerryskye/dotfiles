@@ -161,27 +161,6 @@ require('packer').startup(function()
   use 'vim-test/vim-test'
   use 'tpope/vim-unimpaired'
 
-  use {
-    'yetone/avante.nvim',
-    branch = 'main',
-    run = 'make',
-    requires = {
-      'nvim-lua/plenary.nvim',
-      'MunifTanjim/nui.nvim',
-      'MeanderingProgrammer/render-markdown.nvim',
-      "nvim-treesitter/nvim-treesitter",
-      "stevearc/dressing.nvim",
-      "nvim-lua/plenary.nvim",
-      "MunifTanjim/nui.nvim",
-      "hrsh7th/nvim-cmp",
-      "ibhagwan/fzf-lua",
-      "nvim-tree/nvim-web-devicons"
-    },
-    config = function()
-      require('avante').setup()
-    end
-  }
-
   use { 'edkolev/tmuxline.vim', opt = true }
   use { 'leafgarland/typescript-vim', opt = true }
   use { 'posva/vim-vue', opt = true }
