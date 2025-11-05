@@ -239,6 +239,5 @@ require('lazy').setup({
     'edkolev/tmuxline.vim',
     { 'leafgarland/typescript-vim', ft = "typescript" },
     { 'posva/vim-vue', ft = "vue" },
-  },
-  checker = { enabled = true }
+  }
 })
