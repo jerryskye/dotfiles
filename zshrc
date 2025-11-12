@@ -73,6 +73,6 @@ fi
 autoload -Uz compinit
 compinit
 
-[ -f "$HOME/.profile" ] && . "$HOME/.profile" # Source .profile last to allow host-specific overrides
 source <(fzf --zsh)
 eval "$(starship init zsh)"
+[ -f "$HOME/.profile" ] && . "$HOME/.profile" # Source .profile last to allow host-specific overrides
