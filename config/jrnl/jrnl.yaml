@@ -3,8 +3,8 @@ colors:
   date: YELLOW
   tags: BLUE
   title: none
-default_hour: 22
-default_minute: 0
+default_hour: 23
+default_minute: 59
 editor: nvim
 encrypt: false
 highlight: true
