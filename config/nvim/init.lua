@@ -87,6 +87,22 @@ vim.api.nvim_create_user_command('Rgaf', function(opts)
   vim.cmd('call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case --hidden --no-ignore --fixed-strings ' .. vim.api.nvim_call_function('shellescape', {opts.args}) .. '", 1, fzf#vim#with_preview(), ' .. (opts.bang and '1' or '0') .. ')')
 end, { nargs = '*', bang = true })
 
+vim.api.nvim_create_autocmd( {"BufNewFile","BufReadPre" }, {
+  group = vim.api.nvim_create_augroup("PrivateJrnl", {}),
+  pattern = "*.jrnl",
+  callback = function()
+    vim.o.shada = ""
+    vim.o.swapfile = false
+    vim.o.undofile = false
+    vim.o.backup = false
+    vim.o.writebackup = false
+    vim.o.shelltemp = false
+    vim.o.history = 0
+    vim.o.modeline = false
+    vim.o.secure = true
+  end,
+})
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
