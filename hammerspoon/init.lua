@@ -5,7 +5,7 @@ hs.hotkey.bind({'cmd', 'ctrl'}, 'R', function()
 end)
 
 hs.hotkey.bind({'cmd', 'ctrl'}, 'M', function()
-  hs.application.launchOrFocus('Messages')
+  hs.mouse.setRelativePosition({x=999999,y=999999})
 end)
 
 hs.hotkey.bind({'cmd', 'ctrl'}, 'T', function()
