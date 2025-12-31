@@ -10,7 +10,7 @@ encrypt: false
 highlight: true
 indent_character: '|'
 journals:
-  default: /mnt/d/Documents/journal.txt
+  default: ~/Sync/journal/
 linewrap: 79
 tagsymbols: '@'
 template: false
