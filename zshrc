@@ -74,5 +74,6 @@ autoload -Uz compinit
 compinit
 
 source <(fzf --zsh)
+eval "$(dircolors ~/.dircolors)"
 eval "$(starship init zsh)"
 [ -f "$HOME/.profile" ] && . "$HOME/.profile" # Source .profile last to allow host-specific overrides
