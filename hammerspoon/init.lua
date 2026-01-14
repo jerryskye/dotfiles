@@ -13,7 +13,7 @@ hs.hotkey.bind({'cmd', 'ctrl'}, 'T', function()
 end)
 
 hs.hotkey.bind({'cmd', 'ctrl'}, 'W', function()
-  hs.application.launchOrFocus('Firefox')
+  hs.application.launchOrFocus('Zen')
 end)
 
 hs.hotkey.bind({'cmd', 'ctrl'}, 'S', function()
@@ -56,7 +56,7 @@ hs.hotkey.bind({'cmd', 'ctrl'}, 'L', function()
   local screens = screens_table()
 
   hs.layout.apply({
-    {"Firefox", nil, screens[1], hs.layout.maximized, nil, nil},
+    {"Zen", nil, screens[1], hs.layout.maximized, nil, nil},
     {"Music", nil, screens[2], {x1=0.8, y1=0, w=0.2, h=1.0}, nil, nil},
     {"Messages", nil, screens[2], {x1=0.2, y1=0, w=0.6, h=0.66}, nil, nil},
     {"Slack", "%d+:%d+", screens[1], hs.layout.maximized, nil, nil},
@@ -70,7 +70,7 @@ hs.hotkey.bind({'cmd', 'ctrl'}, ';', function()
   local screens = screens_table()
 
   hs.layout.apply({
-    {"Firefox", nil, screens[1], hs.layout.left50, nil, nil},
+    {"Zen", nil, screens[1], hs.layout.left50, nil, nil},
     {"Alacritty", nil, screens[1], hs.layout.right50, nil, nil},
   })
 end)
